@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodo } from "./components/IncompleteTodo";
@@ -63,6 +63,7 @@ export const App = () => {
       <CompleteTodo
         completeTodos={completeTodos}
         onClickReturn={onClickReturn}
+        existThanFive={incompleteTodos.length >= 5}
       />
     </>
   );

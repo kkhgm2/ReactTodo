@@ -1,7 +1,7 @@
 import React from "react";
 
 export const CompleteTodo = (props) => {
-  const { completeTodos, onClickReturn } = props;
+  const { completeTodos, onClickReturn, existThanFive } = props;
   return (
     <div className="complete-area">
       <p className="title">completed todo</p>
@@ -10,7 +10,9 @@ export const CompleteTodo = (props) => {
           <ul>
             <div key={x} className="list-row">
               <li>{x}</li>
-              <button onClick={() => onClickReturn(i)}>retrurn</button>
+              <button onClick={() => onClickReturn(i)} disabled={existThanFive}>
+                retrurn
+              </button>
             </div>
           </ul>
         );
